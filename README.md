@@ -13,3 +13,5 @@ Utilization:
 Creatives and customers will be able to view art for sale and purchase both and digital and physical pieces for themselves. Creatives will also be able to sell their art through the application. 
 
 The Future:
+
+
