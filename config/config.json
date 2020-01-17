@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "password",
-    "database": "exampledb",
+    "database": "innodb",
     "host": "3.13.20.0",
     "dialect": "mysql"
   },
