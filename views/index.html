@@ -36,12 +36,17 @@
                 var data = dataArr[i];
                 var page = $("<div>")
                 .addClass("itemTemplateWrapper")
-                .append($("<img>").attr("src", data.image).css('width', '100px'))
-                .append($("<div>").attr("title", data.title));
+                .append($("<img>").attr("src", data.image).css('width', '200px'))
+                .append($("<p>").text(data.title))
+                .append($("<p>").text(data.artist))
+                .append($("<p>").text(data.year))
+                .append($("<p>").text(data.description))
+                .append($("<p>").text(data.price))
+      
+            
             
                 $("#container").append(page);
-            }
-            
+            } 
 };
         // window.addEventListener("load", renderTemplates)
         renderTemplates(dataArr);
@@ -49,8 +54,10 @@
     </script>
 </head>
 
-<body>
+<img src="" alt="">
+<p >the title</p>
 
+<body>
     <!-- jQuery -->
     <script type="text/html" id="itemTemplate"></script>
     <div class="itemTemplateWrapper"></div>
@@ -60,10 +67,9 @@
     <div data-content="year"></div>
     <div data-content="description"></div>
     <div data-content="price"></div>
-    
+
     <!-- container where the templates will be instantiated-->
     <div id="container">
     </div>
-
 </body>
 </html>
