@@ -11,7 +11,7 @@ var dataArr = [
         "artist": "Maurizio Cattelan",
         "year": " 2019",
         "description": "A Chinese copy of a famous banana",
-        "price": "$2000"
+        "price": "2000"
     },
     {
 
@@ -19,7 +19,7 @@ var dataArr = [
         "artist": "Benjamin Uribe",
         "year": " 2019",
         "description": "The result of leaving your son with the refrigerator’s magnets.",
-        "price": "$2300"
+        "price": "2300"
     },
     {
 
@@ -27,7 +27,7 @@ var dataArr = [
         "artist": "Benjamin Uribe",
         "year": " 2019",
         "description": "An art piece from the producer’s son.",
-        "price": "$2700"
+        "price": "2700"
     },
     {
 
@@ -35,7 +35,7 @@ var dataArr = [
         "artist": "Raffici Delutte",
         "year": " 1957",
         "description": "An original flyer for an extinct cigarette label. Made out of Clay.",
-        "price": "$700"
+        "price": "700"
     },
     {
 
@@ -43,7 +43,7 @@ var dataArr = [
         "artist": "Eduardo Larreamendy",
         "year": "1904",
         "description": "The oldest of Pokemons, Chandisse is the Pokemon of fire! Made with magic and ceramic.",
-        "price": "$12800"
+        "price": "12800"
     },
     {
 
@@ -51,7 +51,7 @@ var dataArr = [
         "artist": "Daniel Satient",
         "year": "2018",
         "description": " No3 of Daniel’s robot collection, Sarient’s drawing represents sadness.",
-        "price": "$5000"
+        "price": "5000"
     },
     {
 
@@ -59,7 +59,7 @@ var dataArr = [
         "artist": "Ai Weiwei",
         "year": "2014",
         "description": "Hand painted logo on Han dynasty vase (206 BC-220 AD)",
-        "price": "$423000"
+        "price": "423000"
     },
     {
 
@@ -67,7 +67,7 @@ var dataArr = [
         "artist": "Andy Warhol",
         "year": "1964",
         "description": "Hand painted wood sculpture",
-        "price": "$423000"
+        "price": "423000"
     },
     {
 
@@ -75,7 +75,7 @@ var dataArr = [
         "artist": "Arman",
         "year": "1969",
         "description": "Trash",
-        "price": "$500000"
+        "price": "500000"
     },
     {
 
@@ -83,7 +83,7 @@ var dataArr = [
         "artist": "Simon Denny",
         "year": "2019",
         "description": "Silk scarf from Margaeth Tatcher sew on Patagonia sleeeping bags",
-        "price": "$60000"
+        "price": "60000"
     },
     {
 
@@ -99,7 +99,7 @@ var dataArr = [
         "artist": "Jackie Pierson",
         "year": "2017",
         "description": "Illustration",
-        "price": "$1000"
+        "price": "1000"
     },
     {
 
@@ -107,7 +107,7 @@ var dataArr = [
         "artist": "Jackie Pierson",
         "year": "2017",
         "description": "Sculpture",
-        "price": "$10000"
+        "price": "10000"
     },
     {
 
@@ -115,7 +115,7 @@ var dataArr = [
         "artist": "Jackie Pierson",
         "year": "2017",
         "description": "Scupture",
-        "price": "$5000"
+        "price": "5000"
     },
     {
 
@@ -123,7 +123,7 @@ var dataArr = [
         "artist": "Jackie Pierson",
         "year": "2017",
         "description": "Drawing on paper",
-        "price": "$1000"
+        "price": "1000"
     }
 ];
 

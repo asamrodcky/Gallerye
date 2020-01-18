@@ -3,8 +3,42 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/allArtwork", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+    db.Products.findAll({
+      order: [["createdAt", "ASC"]]
+    }).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
+  });
+// Get all by Artist
+  app.get("/api/byArtist", function(req, res) {
+    db.Products.findAll({
+      order: [["artist", "ASC"]]
+    }).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
+  });
+//Get all by year
+  app.get("/api/byYear", function(req, res) {
+    db.Products.findAll({
+      order: [["year", "ASC"]]
+    }).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
+  });
+  //Get all by Title
+  app.get("/api/byTitle", function(req, res) {
+    db.Products.findAll({
+      order: [["product_name", "ASC"]]
+    }).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
+  });
+  //Get all by Price
+  app.get("/api/byPrice", function(req, res) {
+    db.Products.findAll({
+      order: [["price", "DESC"]]
+    }).then(function(dbProducts) {
+      res.json(dbProducts);
     });
   });
 
@@ -22,3 +56,4 @@ module.exports = function(app) {
   //   });
   // });
 };
+
