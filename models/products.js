@@ -30,6 +30,10 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
       validate: {
         len: [1]
+      },
+      sold: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
       }
     }
   });
