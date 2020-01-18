@@ -1,8 +1,12 @@
 
 var Sequelize = require("sequelize");
+var env = process.env.NODE_ENV || "development";
+var config = require(__dirname + "/config/config.json")[env];
+console.log(config);
+var sequelize = new Sequelize(config);
 var dataArr = [
     {
-        
+
         "product_name": "Banana Comedy",
         "artist": "Maurizio Cattelan",
         "year": " 2019",
@@ -10,7 +14,7 @@ var dataArr = [
         "price": "$2000"
     },
     {
-        
+
         "product_name": "Frida Bigotes",
         "artist": "Benjamin Uribe",
         "year": " 2019",
@@ -18,7 +22,7 @@ var dataArr = [
         "price": "$2300"
     },
     {
-        
+
         "product_name": "W is for \"WHEEL\"",
         "artist": "Benjamin Uribe",
         "year": " 2019",
@@ -26,7 +30,7 @@ var dataArr = [
         "price": "$2700"
     },
     {
-        
+
         "product_name": "Indi Cigarette",
         "artist": "Raffici Delutte",
         "year": " 1957",
@@ -34,7 +38,7 @@ var dataArr = [
         "price": "$700"
     },
     {
-        
+
         "product_name": "Pokemon Chandelier",
         "artist": "Eduardo Larreamendy",
         "year": "1904",
@@ -42,7 +46,7 @@ var dataArr = [
         "price": "$12800"
     },
     {
-        
+
         "product_name": "Robotte",
         "artist": "Daniel Satient",
         "year": "2018",
@@ -50,7 +54,7 @@ var dataArr = [
         "price": "$5000"
     },
     {
-        
+
         "product_name": "Coca-Cola Vase",
         "artist": "Ai Weiwei",
         "year": "2014",
@@ -58,7 +62,7 @@ var dataArr = [
         "price": "$423000"
     },
     {
-        
+
         "product_name": "Brillo Box",
         "artist": "Andy Warhol",
         "year": "1964",
@@ -66,7 +70,7 @@ var dataArr = [
         "price": "$423000"
     },
     {
-        
+
         "product_name": "New York Garbage",
         "artist": "Arman",
         "year": "1969",
@@ -74,7 +78,7 @@ var dataArr = [
         "price": "$500000"
     },
     {
-        
+
         "product_name": "Silk Scarf Sleeping Bags",
         "artist": "Simon Denny",
         "year": "2019",
@@ -82,7 +86,7 @@ var dataArr = [
         "price": "$60000"
     },
     {
-        
+
         "product_name": "Chanel Chain Saw",
         "artist": "Tom Sachs",
         "year": "1996",
@@ -90,7 +94,7 @@ var dataArr = [
         "price": "on request"
     },
     {
-        
+
         "product_name": "MTA : Always Moving",
         "artist": "Jackie Pierson",
         "year": "2017",
@@ -98,7 +102,7 @@ var dataArr = [
         "price": "$1000"
     },
     {
-        
+
         "product_name": "What We Throw Away",
         "artist": "Jackie Pierson",
         "year": "2017",
@@ -106,7 +110,7 @@ var dataArr = [
         "price": "$10000"
     },
     {
-        
+
         "product_name": "Distant Lands",
         "artist": "Jackie Pierson",
         "year": "2017",
@@ -114,7 +118,7 @@ var dataArr = [
         "price": "$5000"
     },
     {
-        
+
         "product_name": "FEMPOWERMENT ",
         "artist": "Jackie Pierson",
         "year": "2017",
@@ -123,7 +127,9 @@ var dataArr = [
     }
 ];
 
+var products = sequelize["import"]('models/products.js');
 
-for (var i = 0; i < dataArr.length; i++){
+for (var i = 0; i < dataArr.length; i++) {
     console.log(dataArr[i]);
+    products.create(dataArr[i])
 }
