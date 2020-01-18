@@ -11,7 +11,6 @@ module.exports = function (app) {
 
   app.get("/allArtwork", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/artwork.html"));
-
   });
 
   // Load example page and pass in an example by id
