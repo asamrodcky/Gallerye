@@ -1,10 +1,13 @@
+const express = require ("express");
+
 var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
+  
   app.get("/api/allArtwork", function(req, res) {
-    db.gallerye_db.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+    db.gallerye_db.findAll({}).then(function(gallerey_db) {
+      res.json(gallerey_db);
     });
   });
 
