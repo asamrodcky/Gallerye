@@ -27,52 +27,70 @@
 <body>
 
     <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">GALLERYE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="artwork.html">All artworks</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="sell.html">Sell your art</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="account.html">Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="product.html">Sign In/Log In</a>
-        </li>
-          <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-        </li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">GALLERYE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="artwork.html">All artworks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sell.html">Sell your art</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="account.html">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Sign In/Log In</a>
+                </li>
+                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="filter">FILTERING OPTIONS
-        <div class="item">TITLE <br>
-            <input type="text">
-        </div> <br>
-        <div class="item">ARTIST <br>
-            <input type="text">
-        </div> <br>
-        <div class="item">YEAR <br>
-            <input type="text">
-        </div> <br>
-        <div class="item">PRICE <br>
-            <input type="text">
-        </div> <br>
-        <div class="item"> <br>
-            <input type="text">
-        </div> <br>
-       
+    <div class="container">
+        <div class="row">
+
+            <!-- FILTERING OPTIONS -->
+            <div class="filter .d-flex">FILTERING OPTIONS
+                <div class="item">TITLE <br>
+                    <input type="text">
+                </div> <br>
+                <div class="item">ARTIST <br>
+                    <input type="text">
+                </div> <br>
+                <div class="item">YEAR <br>
+                    <input type="text">
+                </div> <br>
+                <div class="item">PRICE <br>
+                    <input type="text">
+                </div> <br>
+                <div class="item"> <br>
+                    <input type="text">
+                </div> <br>
+
+            </div>
+
+            <!-- CARDS -->
+            <div class="cards_all .d-flex">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Title</h5>
+                        <p class="card-text">Description...........</p>
+                        <a href="#" class="btn bg-dark text-light">BUY</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="../public/js/artwork.js"></script>
