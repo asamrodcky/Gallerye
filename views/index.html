@@ -8,14 +8,16 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 
   <link rel="stylesheet" href="../public/css/indexStyle.css">
@@ -53,6 +55,33 @@
     </div>
   </nav>
 
+    <!-- MODAL -->
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title">GALLERYE <i>Sign In</i></h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST">
+              Name: <br>
+              <input type="text" name="name" size="30"> <br>
+              Email <br>
+              <input type="text" name="email" size="30"> <br>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   <!-- CAROUSEL -->
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -60,14 +89,14 @@
         <img class="d-block w-100" src="../public/images/IMG_010.jpg" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="../public/images/IMG_015.jpg"  alt="Second slide">
+        <img class="d-block w-100" src="../public/images/IMG_015.jpg" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="../public/images/IMG_001.jpg"  alt="Third slide">
+        <img class="d-block w-100" src="../public/images/IMG_001.jpg" alt="Third slide">
       </div>
     </div>
   </div>
-  <!--  -->
+
   <!-- <script type="text/html" id="itemTemplate"></script>
     <div class="itemTemplateWrapper"></div>
     <img data-src="image" data-alt="author"/>
@@ -81,8 +110,9 @@
   <!-- <div id="container"></div> -->
 
 
-  <!-- SCRIPT CAROUSEL-->
-  <script>
+
+  <script type="text/javascript">
+    //SCRIPT CAROUSEL
     $(document).ready(function () {
       // Activate Carousel
       $("#carouselExampleSlidesOnly").carousel({ interval: 500 });
@@ -97,42 +127,36 @@
       $(".item3").click(function () {
         $("#myCarousel").carousel(2);
       });
+
+      //SCRIPT MODAL
+      $(window).on('load', function () {
+        $('.modal').modal('show');
+      });
+
+      // $('#submitButton').on('click', function (event) {
+      //     event.preventDefault();
+
+      //     var userInput = {
+      //         name: $('#userName').val(),
+      //         photo: $('#userPhoto').val(),
+      //         scores: [
+      //             $("input[type=radio][name=inlineRadioOptions1]:checked").val(),
+      //         ]
+      //     };
+
+      //     //Load user input
+      //     $.post('/api/friends', userInput, function (data) {
+
+      //         //Set name and image values into modal
+      //         $('#match').html(data.matchName);
+      //         $("#match_img").attr("src", data.matchImage);
+
+      //         //Show modal
+      //         $('#myModal').modal('show');
+      // });
     });
+
   </script>
-
-  <!-- SCRIPT MODAL-->
-  <script type="text/javascript">
-
-    $(function () {
-
-        var modal = $('#myModal');
-        $('#myModal').modal('hide');
-    });
-
-    $('#submitButton').on('click', function (event) {
-        event.preventDefault();
-
-        var userInput = {
-            name: $('#userName').val(),
-            photo: $('#userPhoto').val(),
-            scores: [
-                $("input[type=radio][name=inlineRadioOptions1]:checked").val(),
-            ]
-        };
-
-        //Load user input
-        $.post('/api/friends', userInput, function (data) {
-
-            //Set name and image values into modal
-            $('#match').html(data.matchName);
-            $("#match_img").attr("src", data.matchImage);
-
-            //Show modal
-            $('#myModal').modal('show');
-        });
-    });
-
-</script>
 
 </body>
 
