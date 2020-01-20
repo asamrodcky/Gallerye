@@ -18,6 +18,14 @@ body {
     font-size: 20px !important;
 }
 
+ /* MODAL */
+ .modal {
+
+}
+.modal-header {
+    color: white;
+}
+
 .filter {
     /* display: flexbox; */
     border: 1px solid red;
@@ -37,3 +45,4 @@ body {
     /* display: flexbox; */
     margin: 10px;
 }
+
