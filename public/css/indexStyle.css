@@ -4,9 +4,39 @@
     font-size: 1.2rem;
 }
 
-
-
-.itemTemplateWrapper {
+/* .itemTemplateWrapper {
     width: 200px;
     float: left;
+} */
+
+
+/*navbar*/
+.navbar {
+    height: 100px;
 }
+.navbar-brand {
+    font-size: 70px !important;
+}
+.navbar-nav {
+    font-size: 20px !important;
+}
+
+
+/*carousel*/
+
+#myCarousel {
+    margin-top: 40px;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 500px;
+    margin: auto;
+}
+
+/* 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  } */

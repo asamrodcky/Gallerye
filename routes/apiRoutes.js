@@ -5,7 +5,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   
-  app.get("/api/allArtwork", function(req, res) {
+  app.get("/allArtwork", function(req, res) {
     db.gallerye_db.findAll({}).then(function(gallerey_db) {
       res.json(gallerey_db);
     });
