@@ -1,7 +1,10 @@
+const express = require ("express");
+
 var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
+
   app.get("/api/allArtwork", function(req, res) {
     db.Products.findAll({
       order: [["createdAt", "ASC"]]

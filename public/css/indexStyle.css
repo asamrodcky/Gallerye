@@ -1,0 +1,46 @@
+  * {
+      font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  body {
+      /* background-color: red; */
+  }
+
+  /* NAVBAR */
+
+  .navbar {
+      height: 3.5rem;
+  }
+
+  .navbar-brand {
+      font-size: 70px !important;
+  }
+
+  .navbar-nav {
+      font-size: 20px !important;
+  }
+
+  /* CAROUSEL */
+
+  #myCarousel {
+      margin-top: 40px;
+  }
+
+  .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+      width: 500px;
+      margin: auto;
+  }
+
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  /* MODAL */
+  .modal {
+
+  }
+  .modal-header {
+      color: white;
+  }

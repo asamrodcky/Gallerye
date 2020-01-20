@@ -1,0 +1,46 @@
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+  
+}
+
+body {
+    text-align: center;
+}
+
+.navbar {
+    height: 3.5rem;
+}
+.navbar-brand {
+    font-size: 70px !important;
+}
+.navbar-nav {
+    font-size: 20px !important;
+}
+
+.info {
+margin-top: 30px;
+border: 1px solid red;
+width: 80%;
+height: 50px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.own, .sold {
+border: 1px solid red;
+width: 80%;
+height: 200px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* 
+form {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 300px;
+} */
