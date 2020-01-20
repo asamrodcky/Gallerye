@@ -38,6 +38,9 @@
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="artwork.html">All artworks</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="sell.html">Sell your art</a>
         </li>
         <li class="nav-item">
@@ -77,6 +80,8 @@
   <!-- container where the templates will be instantiated-->
   <!-- <div id="container"></div> -->
 
+
+  <!-- SCRIPT CAROUSEL-->
   <script>
     $(document).ready(function () {
       // Activate Carousel
@@ -94,6 +99,40 @@
       });
     });
   </script>
+
+  <!-- SCRIPT MODAL-->
+  <script type="text/javascript">
+
+    $(function () {
+
+        var modal = $('#myModal');
+        $('#myModal').modal('hide');
+    });
+
+    $('#submitButton').on('click', function (event) {
+        event.preventDefault();
+
+        var userInput = {
+            name: $('#userName').val(),
+            photo: $('#userPhoto').val(),
+            scores: [
+                $("input[type=radio][name=inlineRadioOptions1]:checked").val(),
+            ]
+        };
+
+        //Load user input
+        $.post('/api/friends', userInput, function (data) {
+
+            //Set name and image values into modal
+            $('#match').html(data.matchName);
+            $("#match_img").attr("src", data.matchImage);
+
+            //Show modal
+            $('#myModal').modal('show');
+        });
+    });
+
+</script>
 
 </body>
 
