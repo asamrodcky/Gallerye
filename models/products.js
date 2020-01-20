@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   var Products = sequelize.define("Products", {
+    
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -31,10 +32,10 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         len: [1]
       },
-      sold: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-      }
+    },
+    sold: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
   });
   return Products;

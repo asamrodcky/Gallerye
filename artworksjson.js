@@ -1,122 +1,135 @@
-[
+
+var Sequelize = require("sequelize");
+var env = process.env.NODE_ENV || "development";
+var config = require(__dirname + "/config/config.json")[env];
+console.log(config);
+var sequelize = new Sequelize(config);
+var dataArr = [
     {
-        "image": "images/IMG_001.jpg",
-        "title": "Banana Comedy",
+
+        "product_name": "Banana Comedy",
         "artist": "Maurizio Cattelan",
         "year": " 2019",
         "description": "A Chinese copy of a famous banana",
-        "price": "$2000"
+        "price": "2000"
     },
     {
-        "image": "images/IMG_002.jpg",
-        "title": "Frida Bigotes",
+
+        "product_name": "Frida Bigotes",
         "artist": "Benjamin Uribe",
         "year": " 2019",
         "description": "The result of leaving your son with the refrigerator’s magnets.",
-        "price": "$2300"
+        "price": "2300"
     },
     {
-        "image": "images/IMG_003.jpg",
-        "title": "W is for \"WHEEL\"",
+
+        "product_name": "W is for \"WHEEL\"",
         "artist": "Benjamin Uribe",
         "year": " 2019",
         "description": "An art piece from the producer’s son.",
-        "price": "$2700"
+        "price": "2700"
     },
     {
-        "image": "images/IMG_004.jpg",
-        "title": "Indi Cigarette",
+
+        "product_name": "Indi Cigarette",
         "artist": "Raffici Delutte",
         "year": " 1957",
         "description": "An original flyer for an extinct cigarette label. Made out of Clay.",
-        "price": "$700"
+        "price": "700"
     },
     {
-        "image": "images/IMG_005.jpg",
-        "title": "Pokemon Chandelier",
+
+        "product_name": "Pokemon Chandelier",
         "artist": "Eduardo Larreamendy",
         "year": "1904",
         "description": "The oldest of Pokemons, Chandisse is the Pokemon of fire! Made with magic and ceramic.",
-        "price": "$12800"
+        "price": "12800"
     },
     {
-        "image": "images/IMG_006.jpg",
-        "title": "Robotte",
+
+        "product_name": "Robotte",
         "artist": "Daniel Satient",
         "year": "2018",
         "description": " No3 of Daniel’s robot collection, Sarient’s drawing represents sadness.",
-        "price": "$5000"
+        "price": "5000"
     },
     {
-        "image": "images/IMG_007.jpg",
-        "title": "Coca-Cola Vase",
+
+        "product_name": "Coca-Cola Vase",
         "artist": "Ai Weiwei",
         "year": "2014",
         "description": "Hand painted logo on Han dynasty vase (206 BC-220 AD)",
-        "price": "$423000"
+        "price": "423000"
     },
     {
-        "image": "images/IMG_008.jpg",
-        "title": "Brillo Box",
+
+        "product_name": "Brillo Box",
         "artist": "Andy Warhol",
         "year": "1964",
         "description": "Hand painted wood sculpture",
-        "price": "$423000"
+        "price": "423000"
     },
     {
-        "image": "images/IMG_009.jpg",
-        "title": "New York Garbage",
+
+        "product_name": "New York Garbage",
         "artist": "Arman",
         "year": "1969",
         "description": "Trash",
-        "price": "$500000"
+        "price": "500000"
     },
     {
-        "image": "images/IMG_010.jpg",
-        "title": "Silk Scarf Sleeping Bags",
+
+        "product_name": "Silk Scarf Sleeping Bags",
         "artist": "Simon Denny",
         "year": "2019",
         "description": "Silk scarf from Margaeth Tatcher sew on Patagonia sleeeping bags",
-        "price": "$60000"
+        "price": "60000"
     },
     {
-        "image": "images/IMG_011.jpg",
-        "title": "Chanel Chain Saw",
+
+        "product_name": "Chanel Chain Saw",
         "artist": "Tom Sachs",
         "year": "1996",
         "description": "Cardboard and Thermal Adhesive",
         "price": "on request"
     },
     {
-        "image": "images/IMG_012.jpg",
-        "title": "MTA : Always Moving",
+
+        "product_name": "MTA : Always Moving",
         "artist": "Jackie Pierson",
         "year": "2017",
         "description": "Illustration",
-        "price": "$1000"
+        "price": "1000"
     },
     {
-        "image": "images/IMG_013.jpg",
-        "title": "What We Throw Away",
+
+        "product_name": "What We Throw Away",
         "artist": "Jackie Pierson",
         "year": "2017",
         "description": "Sculpture",
-        "price": "$10000"
+        "price": "10000"
     },
     {
-        "image": "images/IMG_014.jpg",
-        "title": "Distant Lands",
+
+        "product_name": "Distant Lands",
         "artist": "Jackie Pierson",
         "year": "2017",
         "description": "Scupture",
-        "price": "$5000"
+        "price": "5000"
     },
     {
-        "image": "images/IMG_015.jpg",
-        "title": "FEMPOWERMENT ",
+
+        "product_name": "FEMPOWERMENT ",
         "artist": "Jackie Pierson",
         "year": "2017",
         "description": "Drawing on paper",
-        "price": "$1000"
+        "price": "1000"
     }
-]
+];
+
+var products = sequelize["import"]('models/products.js');
+
+for (var i = 0; i < dataArr.length; i++) {
+    console.log(dataArr[i]);
+    products.create(dataArr[i])
+}
