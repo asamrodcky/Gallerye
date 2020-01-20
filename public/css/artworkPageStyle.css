@@ -19,7 +19,7 @@ body {
 }
 
 .filter {
-    display: flexbox;
+    /* display: flexbox; */
     border: 1px solid red;
     margin: 10px;
     width: 300px;
@@ -34,6 +34,6 @@ body {
 }
 
 .cards_all {
-    display: flexbox;
+    /* display: flexbox; */
     margin: 10px;
 }
