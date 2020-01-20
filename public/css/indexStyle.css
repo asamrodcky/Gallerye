@@ -1,6 +1,10 @@
-  /* * {
+  * {
     font-family: 'Noto Sans JP', sans-serif;
 } 
+
+body{
+    /* background-color: red; */
+}
 
 .navbar {
     height: 3.5rem;
@@ -12,18 +16,17 @@
     font-size: 20px !important;
 }
 
-#myCarousel {
+ #myCarousel {
     margin-top: 40px;
 }
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     width: 500px;
     margin: auto;
-}  */
+}  
 
-/* 
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-  } */
+  }
