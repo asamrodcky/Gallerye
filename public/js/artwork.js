@@ -1,6 +1,24 @@
 
+
+
+
 $(document).ready(function () {
-    
+
+    var dataArr = [];
+
+    $.ajax({
+        url: "/api/allArtwork",
+        method: "GET",
+        data: artData
+    })
+        .then(function () {
+            dataArr = artData
+        })
+        .catch(err => {
+            console.log(err)
+        });
+
+
     $(function () {
         function renderTemplates(dataArr) {
             for (var i = 0; i < dataArr.length; i++) {
