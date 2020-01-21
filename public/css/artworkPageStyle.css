@@ -1,7 +1,6 @@
 * {
     font-family: 'Noto Sans JP', sans-serif;
     /* font-family: Arial, Helvetica, sans-serif; */
-  
 }
 
 body {
@@ -11,17 +10,19 @@ body {
 .navbar {
     height: 3.5rem;
 }
+
 .navbar-brand {
     font-size: 70px !important;
 }
+
 .navbar-nav {
     font-size: 20px !important;
 }
 
- /* MODAL */
- .modal {
+/* MODAL */
 
-}
+.modal {}
+
 .modal-header {
     color: white;
 }
@@ -38,7 +39,7 @@ body {
     border: 1px solid red;
     width: 250px;
     height: 70px;
-    margin:auto;
+    margin: auto;
 }
 
 .cards_all {
@@ -46,3 +47,24 @@ body {
     margin: 10px;
 }
 
+.sidenav {
+    margin-top: 30px;
+    /* display: flexbox; */
+    border: 1px solid red;
+    height: 900px;
+    width: 200px;
+    height: 100%;
+    /* position: relative; */
+    /* z-index: 1; */
+    /* top: 0; */
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+select {
+    display: flexbox;
+    width: 100px;
+    margin: 20px;
+}
