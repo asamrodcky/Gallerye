@@ -18,6 +18,14 @@ body {
     font-size: 20px !important;
 }
 
+/* MODAL */
+.modal {
+
+}
+.modal-header {
+    color: white;
+}
+
 .filter {
     border: 1px solid red;
     margin-left: 0px;
@@ -33,6 +41,34 @@ body {
     margin:auto;
 }
 
+.sidenav {
+    border: 1px solid red;
+    margin-top: 0px;
+    margin-left:0px;
+    width: 250px;
+    height: 1000px;
+    float: left;
+    background-color: lightgrey;
+}
+
+.categories, span {
+    margin-top:30px;
+}
+
+.card {
+    border: 1px solid red;
+    width: 250px;
+    float: left;
+    margin:30px;
+}
+
+.card-img-top {
+    border: 1px solid red;
+
+}
+
+
+
 /* form {
     font-size: 1.5rem;
     margin-top: 50px;
@@ -41,3 +77,4 @@ body {
     text-align: left;
     width: 300px;
 } */
+
