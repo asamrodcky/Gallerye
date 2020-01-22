@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-        
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
@@ -72,6 +72,12 @@
             <option value='M'> $10.000+ </option>
             <option value='D'> $100.000+</option>
         </select>
+        <span> Artists </span>
+        <select id="price" name="price">
+            <option value="">Please select one</option>
+        </select>
+        
+
     </div>
 
     <!-- MODAL -->
@@ -161,31 +167,17 @@
             </script>
 
 
-
-
-
-
             <script type="text/javascript">
-                //SCRIPT MODAL
+
+                //SCRIPT MODAL (this script on every page)
                 $("#sign").on('click', function () {
                     $('.modal').modal('show');
                 });
 
                 //SCRIPT SELECT YEARS
-
-                //test 01 ------------------------
-                // var myDate = newDate();
-                // var year = myDate.getFullYear();
-                // for (var i = 1950; i < year+1; i++) {
-                //     $("#year").append($(('<option />').val(i).html(i)))
-                // };
-
-                //text 02 ------------------------
                 $(document).ready(function () {
-
                     for (i = new Date().getFullYear(); i > 1950; i--) {
                         $("#year").append($('<option />').val(i).html(i))
-
                     };
                 });
 

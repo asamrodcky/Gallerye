@@ -9,7 +9,7 @@ $(document).ready(function () {
     $.ajax({
         url: "/api/allArtwork",
         method: "GET",
-        data: artData
+        // data: artData
     })
         .then(function () {
             dataArr = artData
