@@ -46,21 +46,21 @@ module.exports = function(app) {
   });
 
   // Create a new customer
-  // app.post("/api/customer", function(req, res) {
-  //   db.Customers.create(req.body).then(function(dbCustomers) {
-  //     res.json(dbCustomers);
-  //   });
-  // });
   app.post("/api/customer", function(req, res) {
-    console.log("Customer Data:");
-    console.log(req.body);
-    Customer.create({
-      first_name: req.body.first_name,
-      email: req.body.email,
-    }).then(function(results) {
-      res.json(results);
+    db.Customers.create(req.body).then(function(dbCustomers) {
+      res.json(dbCustomers);
     });
   });
+  // app.post("/api/customer", function(req, res) {
+  //   console.log("Customer Data:");
+  //   console.log(req.body);
+  //   Customer.create({
+  //     first_name: req.body.first_name,
+  //     email: req.body.email,
+  //   }).then(function(results) {
+  //     res.json(results);
+  //   });
+  // });
   // // Delete an example by id
   // app.delete("/api/examples/:id", function(req, res) {
   //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
