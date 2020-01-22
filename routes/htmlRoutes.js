@@ -6,12 +6,22 @@ module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
     
-    res.sendFile(path.join(__dirname, "..views/index.html"));
+    res.sendFile(path.join(__dirname, "../views/index.html"));
 
   });
 
   app.get("/allArtwork", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/artwork.html"));
+  });
+  app.get("/sell", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/sell.html"));
+  });
+
+  app.get("/account", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/account.html"));
+  });
+  app.get("/product/:id", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/product.html"));
   });
 
   // Load example page and pass in an example by id
@@ -23,8 +33,8 @@ module.exports = function (app) {
   //   });
   // });
 
-  // // Render 404 page for any unmatched routes
-  // app.get("*", function(req, res) {
-  //   res.render("404");
-  // });
+  // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
 };
