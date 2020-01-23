@@ -2,6 +2,10 @@ $(document).ready(function () {
 
     var dataArr = [];
 
+    $('.card-img-top').on('click', function () {
+        $('#anchor').attr('href', '/views/product.html')
+    })
+
     $.ajax({
         url: "/api/allArtwork",
         method: "GET",
@@ -44,24 +48,13 @@ $(document).ready(function () {
                 itemDiv.append(cardDiv)
 
                 $(".container").append(itemDiv);
-
-
             }
         })
         .catch(err => {
             console.log(err)
         });
 
-
-    // $(".card-img-top").on("click", function () {
-    //     // $("product.html").load();
-    //     location = 'product.html'
-    // });
-
-
-    $('.card-img-top').on('click', function () {
-        $('#anchor').attr('href', 'product.html')
-    })
+   
 
 });
 
