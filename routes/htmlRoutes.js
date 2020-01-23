@@ -5,14 +5,14 @@ var path = require("path");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    
+
     res.sendFile(path.join(__dirname, "../views/index.html"));
 
   });
-
+  //routes for pictures serving
   app.get("/public/images/:filename", function (req, res) {
     // console.log(req.filename);
-    res.sendFile(path.join(__dirname, "../public/images/"+req.params.filename));
+    res.sendFile(path.join(__dirname, "../public/images/" + req.params.filename));
 
   });
 
@@ -40,7 +40,7 @@ module.exports = function (app) {
   // });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };
