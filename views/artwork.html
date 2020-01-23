@@ -175,12 +175,14 @@
 
                         var cardDiv = $("<div>")
                         cardDiv.addClass("card-body")
-                        cardDiv.append("<h5 class='card-title'>Card " + i + "</h5>")
-                        cardDiv.append("<p class='card-text'>this is the a piece of art " + i + "</p>")
+                        cardDiv.append("<h5 class='card-title'>"+ res[i].product_name +"</h5>")
+                        cardDiv.append("<h6 class='card-text'>" + res[i].artist + "</h6>")
+                        cardDiv.append("<p class='card-text'>" + res[i].year + ", " + res[i].description + "</p><br>")
+                        cardDiv.append("<p class='card-text'>$ " + res[i].price + "</p>")
                         cardDiv.append("<a href='#' class='btn btn-primary'>Go somewhere</a>")
 
                         itemDiv.append(cardDiv)
-                        
+
                         $(".container").append(itemDiv)
                     }
                 })
