@@ -2,9 +2,9 @@ $(document).ready(function () {
 
     var dataArr = [];
 
-    $('.card-img-top').on('click', function () {
-        $('#anchor').attr('href', '/views/product.html')
-    })
+    // $('.card-img-top').on('click', function () {
+    //     $('#anchor').attr('href', '/views/product.html')
+    // })
 
     $.ajax({
         url: "/api/allArtwork",
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 var cardDiv = $("<div>")
                 cardDiv.addClass("card-body")
                 // cardDiv.append(`<img class='card-img-top' src=${products.imgUrl} alt='product.title'>`)
-                cardDiv.append("<a id='anchor' href=''><img class='card-img-top' src='images/IMG_001.jpg'  alt='image' /></a>")
+                cardDiv.append("<a id='anchor' href='/product/:id'><img class='card-img-top' src='images/IMG_001.jpg'  alt='image' /></a>")
                 // <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
                 cardDiv.append("<p id='card-title'>" + res[i].product_name + " (" + res[i].year + ")" + "</p>")
                 cardDiv.append("<p id='card-text-artist'>" + res[i].artist + "</p>")
