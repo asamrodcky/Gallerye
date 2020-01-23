@@ -10,6 +10,12 @@ module.exports = function (app) {
 
   });
 
+  app.get("/public/images/:filename", function (req, res) {
+    // console.log(req.filename);
+    res.sendFile(path.join(__dirname, "../public/images/"+req.params.filename));
+
+  });
+
   app.get("/allArtwork", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/artwork.html"));
   });
