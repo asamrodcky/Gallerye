@@ -24,27 +24,44 @@ $(document).ready(function () {
                 // Append the item to the container section
                 $(".artworkDiv").append(itemDiv);
                 // Now  we add our book data to the well we just placed on the page
-                var img = $("<img class='card-img-top' src='...' alt='Card image cap'>")
+                var img = $("<img class='card-img-top' src=${} alt='Card image cap'>")
 
                 $("#artpiece-" + i).append(img)
+
 
                 // cardDiv.prepend('<img id="theImg" src=' + res[i].img  + '/>')
 
                 var cardDiv = $("<div>")
                 cardDiv.addClass("card-body")
-                cardDiv.append("<img class='card-img-top' src='images/IMG_001.jpg' alt=''>")
-                cardDiv.append("<p id='card-title'>" + res[i].product_name + " (" + res[i].year + ")" + "</p>") 
-                cardDiv.append("<p id='card-text-artist'>" + res[i].artist + "</p>") 
+                // cardDiv.append(`<img class='card-img-top' src=${products.imgUrl} alt='product.title'>`)
+                cardDiv.append("<a id='anchor' href=''><img class='card-img-top' src='images/IMG_001.jpg'  alt='image' /></a>")
+                // <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                cardDiv.append("<p id='card-title'>" + res[i].product_name + " (" + res[i].year + ")" + "</p>")
+                cardDiv.append("<p id='card-text-artist'>" + res[i].artist + "</p>")
                 cardDiv.append("<p id='card-text-price'>$" + res[i].price + "</p>")
                 // cardDiv.append("<a href='#' class='btn btn-primary'>Go somewhere</a>")
 
                 itemDiv.append(cardDiv)
 
-                $(".container").append(itemDiv)
+                $(".container").append(itemDiv);
+
+
             }
         })
         .catch(err => {
             console.log(err)
         });
-})
+
+
+    // $(".card-img-top").on("click", function () {
+    //     // $("product.html").load();
+    //     location = 'product.html'
+    // });
+
+
+    $('.card-img-top').on('click', function () {
+        $('#anchor').attr('href', 'product.html')
+    })
+
+});
 
