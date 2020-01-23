@@ -17,25 +17,26 @@ $(document).ready(function () {
             for (var i = 0; i < res.length; i++) {
                 // Create a parent div to hold piece data
                 var itemDiv = $("<div>");
-                // Add a class to this div: 'well'
+                // Add a class to this div
                 itemDiv.addClass("card");
-                // Add an id to the well to mark which well it is
+                // Add an id 
                 itemDiv.attr("id", "artpiece-" + i);
                 // Append the item to the container section
                 $(".artworkDiv").append(itemDiv);
-
                 // Now  we add our book data to the well we just placed on the page
                 var img = $("<img class='card-img-top' src='...' alt='Card image cap'>")
 
                 $("#artpiece-" + i).append(img)
 
+                // cardDiv.prepend('<img id="theImg" src=' + res[i].img  + '/>')
+
                 var cardDiv = $("<div>")
                 cardDiv.addClass("card-body")
-                cardDiv.append("<h5 class='card-title'>" + res[i].product_name + "</h5>")
-                cardDiv.append("<h6 class='card-text'>" + res[i].artist + "</h6>")
-                cardDiv.append("<p class='card-text'>" + res[i].year + ", " + res[i].description + "</p><br>")
-                cardDiv.append("<p class='card-text'>$ " + res[i].price + "</p>")
-                cardDiv.append("<a href='#' class='btn btn-primary'>Go somewhere</a>")
+                cardDiv.append("<img class='card-img-top' src='images/IMG_001.jpg' alt=''>")
+                cardDiv.append("<p id='card-title'>" + res[i].product_name + " (" + res[i].year + ")" + "</p>") 
+                cardDiv.append("<p id='card-text-artist'>" + res[i].artist + "</p>") 
+                cardDiv.append("<p id='card-text-price'>$" + res[i].price + "</p>")
+                // cardDiv.append("<a href='#' class='btn btn-primary'>Go somewhere</a>")
 
                 itemDiv.append(cardDiv)
 
