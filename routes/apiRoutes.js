@@ -51,6 +51,8 @@ module.exports = function(app) {
       res.json(dbCustomers);
     });
   });
+
+  
   // app.post("/api/customer", function(req, res) {
   //   console.log("Customer Data:");
   //   console.log(req.body);

@@ -14,7 +14,7 @@ describe("POST /api/customer", function () {
   // & delete all examples from the db
   beforeEach(function () {
     request = chai.request(server);
-    return db.sequelize.sync({ force: true });
+    // return db.sequelize.sync({ force: true });
   });
 
   it("should save an example", function (done) {

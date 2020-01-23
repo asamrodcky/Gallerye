@@ -33,6 +33,10 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
+// db.Products.belongsTo(db.Customers, {constraints: true, onDelete: 'CASCADE'});
+// db.Customers.hasMany(db.Products);
+// magic Sequelize will create an addProducts() method
+  
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {

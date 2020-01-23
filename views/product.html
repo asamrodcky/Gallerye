@@ -20,12 +20,11 @@
     crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="css/productPageStyle.css">
-
 </head>
 
 <body>
-   <!--NAVBAR-->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">GALLERYE</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,88 +47,57 @@
         <li class="nav-item">
           <a class="nav-link" id="sign" href="#">Sign In/Log In</a>
         </li>
-          <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+        <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
         <!-- </li> -->
       </ul>
     </div>
   </nav>
-  
-       <!-- MODAL -->
-       <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header bg-dark">
-              <h5 class="modal-title">GALLERYE <i>Sign In</i></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <!-- <span aria-hidden="true">&times;</span> -->
-              </button>
-            </div>
-            <div class="modal-body">
-              <form action="" method="POST">
-                Name: <br>
-                <input type="text" name="name" size="30"> <br>
-                Email <br>
-                <input type="text" name="email" size="30"> <br>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Save changes</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
+
+ <!-- MODAL -->
+ <div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title">GALLERYE <i>Sign In</i></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <!-- <span aria-hidden="true">&times;</span> -->
+        </button>
       </div>
+      <div class="modal-body">
+        <form action="" method="POST">
+          First Name: <br>
+          <input type="text" name="firstname" size="30" id="firstname"> <br>
+          Last Name: <br>
+          <input type="text" name="name" size="30" id="lastname"> <br>
+          Email <br>
+          <input type="text" name="email" size="30" id="email"> <br>
+          Password <br>
+          <input type="text" name="password" size="30" id="password"> <br>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="add-customer">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div class="container"> IMAGE+DESCRIPTION</div>
- <div>
-     
- </div>
+  <div class="container"> IMAGE+DESCRIPTION
+    <div>
 
+    </div>
 
+  </div>
   
-  <!-- <script type="text/html" id="itemTemplate"></script>
-    <div class="itemTemplateWrapper"></div>
-    <img data-src="image" data-alt="author"/>
-    <div data-content="title"></div>
-    <div data-content="artist"></div>
-    <div data-content="year"></div>
-    <div data-content="description"></div>
-    <div data-content="price"></div> -->
-
-  <!-- container where the templates will be instantiated-->
-  <!-- <div id="container"></div> -->
-
-
-
   <script type="text/javascript">
 
-        //SCRIPT MODAL
-        $("#sign").on('click', function () {
-        $('.modal').modal('show');
-      });
+    //SCRIPT MODAL
+    $("#sign").on('click', function () {
+      $('.modal').modal('show');
+    });
 
-
-      // $('#submitButton').on('click', function (event) {
-      //     event.preventDefault();
-
-      //     var userInput = {
-      //         name: $('#userName').val(),
-      //         photo: $('#userPhoto').val(),
-      //         scores: [
-      //             $("input[type=radio][name=inlineRadioOptions1]:checked").val(),
-      //         ]
-      //     };
-
-      //     //Load user input
-      //     $.post('/api/friends', userInput, function (data) {
-
-      //         //Set name and image values into modal
-      //         $('#match').html(data.matchName);
-      //         $("#match_img").attr("src", data.matchImage);
-
-      //         //Show modal
-      //         $('#myModal').modal('show');
-      // });
+   
   </script>
 
 </body>

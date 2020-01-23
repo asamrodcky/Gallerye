@@ -20,13 +20,13 @@ body {
     font-size: 20px !important;
 }
 
-.filter {
+/* .filter {
     border: 1px solid red;
     margin-left: 0px;
     margin-top: 30px;
     width: 300px;
     height: 100%;
-}
+} */
 
 .item {
     border: 1px solid red;
@@ -35,25 +35,10 @@ body {
     margin: auto;
 }
 
-.sidenav {
-    /* border: 1px solid red; */
-    margin: 0px;
-    /* margin-left: 0px; */
-    padding: 0px;
-    width: 250px;
-    height: 1800px;
-    float: left;
-    background-color: lightgrey;
-}
-
-.categories, span {
-    margin-top: 30px;
-}
-
 /*CARDS*/
 .card {
     /* border: 1px solid red; */
-    width: 250px;
+    width: 80%;
     float: left;
     margin: 30px;
 }
