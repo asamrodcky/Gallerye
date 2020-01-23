@@ -4,6 +4,9 @@ var exphbs = require("express-handlebars");
 
 var db = require("./models");
 
+
+
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -33,6 +36,10 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
+// db.Products.belongsTo(db.Customers, {constraints: true, onDelete: 'CASCADE'});
+// db.Customers.hasMany(db.Products);
+
+  
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
