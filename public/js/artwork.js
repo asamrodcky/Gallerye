@@ -13,7 +13,7 @@ $(document).ready(function () {
     })
         .then(function (res) {
             console.log(res)
-            console.log(res.length)
+            // console.log(res.length)
             // dataArr = artData
             console.log("Attached to artwork.html")
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 var cardDiv = $("<div>")
                 cardDiv.addClass("card-body")
                 // cardDiv.append(`<img class='card-img-top' src=${products.imgUrl} alt='product.title'>`)
-                cardDiv.append("<a id='anchor' href='/product/:id'><img class='card-img-top' src='images/IMG_001.jpg'  alt='image' /></a>")
+                cardDiv.append("<a id='anchor' href='/product/:id'> <img class='card-img-top' src='images/IMG_001.jpg'  alt='image' /></a>")
                 // <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
                 cardDiv.append("<p id='card-title'>" + res[i].product_name + " (" + res[i].year + ")" + "</p>")
                 cardDiv.append("<p id='card-text-artist'>" + res[i].artist + "</p>")
