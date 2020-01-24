@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     $.ajax({
+
         url: "/api/product",
         method: "GET"
     })

@@ -64,19 +64,17 @@
         <!-- <select id="name" name="name">Name</select>
             <span>Artist</span><br>
             <select id="artist" name="artist">Artist</select> -->
-        <span >Year</span>
+
+        <span>Year</span>
         <select id="selectYear" name="">
             <option id="optionYear" value=""></option><br>
-            </select><br>
- 
-            <span> Price </span>
-            <select id="price" name="price">
-                <option value="">Please select one</option>
-                <option value='HS'> $1.000+ </option>
-                <option value='B'> $5.000+</option>
-                <option value='M'> $10.000+ </option>
-                <option value='D'> $100.000+</option>
-            </select>
+        </select><br>
+
+        <span> Price </span>
+        <select id="selectPrice" name="">
+            <option value="optionPrice"></option>
+        </select>
+
     </div>
 
     <div class="artworkDiv"><a href="#"></a></div>
@@ -158,14 +156,12 @@
         });
 
         //SCRIPT SELECT YEARS
-
         //test 01 ------------------------
         // var myDate = newDate();
         // var year = myDate.getFullYear();
         // for (var i = 1950; i < year+1; i++) {
         //     $("#year").append($(('<option />').val(i).html(i)))
         // };
-
         //text 02 ------------------------
         // $(document).ready(function () {
 
