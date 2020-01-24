@@ -39,6 +39,7 @@ $(document).ready(function () {
                 //Append child div to parent div
                 itemDiv.append(cardDiv)
 
+
                 //Check attributes:
                 // const DivForCards = document.querySelector(".artworkDiv a");
                 // console.log("attributesTest", DivForCards.attributes);
@@ -53,6 +54,7 @@ $(document).ready(function () {
             // if year is selected only show the cards with targeted year
 
             //Same with prices...
+
 
 
 
