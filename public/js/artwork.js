@@ -28,7 +28,7 @@ $(document).ready(function () {
                 //add a class
                 cardDiv.addClass("card-body")
                 //create <a><img><a/>
-                var anchorAndImg = $("<a id='anchor' href='/product/:id'> <img class='card-img-top' src='images/IMG_001.jpg' alt='card image'> </a>")
+                var anchorAndImg = $("<a id='anchor' href='/product/:id'> <img class='card-img-top' src='...' alt='card image'> </a>")
                 //append <a><img><a/> for each item
                 $("#artpiece-" + i).append(anchorAndImg);
                 //append Name, Year, Artist, Price, button
@@ -41,16 +41,19 @@ $(document).ready(function () {
                 itemDiv.append(cardDiv)
 
                 //Console log attirbutes for each anchor in main container 
-                const DivForCards = document.querySelector(".artworkDiv a");
-                console.log("attributesTest", DivForCards.attributes);
+                // const DivForCards = document.querySelector(".artworkDiv a");
+                // console.log("attributesTest", DivForCards.attributes);
+
+                //Append each year in dropdown:
+                $("#selectYear").append('<option value="' + res[i].year + '">' + res[i].year + '</option>');
+        
             }
+
+
         })
         .catch(err => {
             console.log(err)
         });
-
-
-
 });
 
 
