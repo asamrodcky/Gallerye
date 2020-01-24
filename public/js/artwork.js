@@ -15,14 +15,15 @@ $(document).ready(function () {
             // For each artwork that our server sends us back:
             for (var i = 0; i < res.length; i++) {
 
-                // New parent Div
+                // NEW PARENT DIV
                 var itemDiv = $("<div>");
                 // Add a class and id to the Div and set id 
                 itemDiv.addClass("card").attr("id", "artpiece-" + i);
-                // Append the item to the container in artwork.html
+
+                // Append parent div to container in artwork.html
                 $(".artworkDiv").append(itemDiv);
 
-                //New children Div
+                //NEW CHILD DIV
                 var cardDiv = $("<div>")
                 //add a class
                 cardDiv.addClass("card-body")
@@ -35,7 +36,8 @@ $(document).ready(function () {
                 cardDiv.append("<p id='card-text-artist'>" + res[i].artist + "</p>")
                 cardDiv.append("<p id='card-text-price'>$" + res[i].price + "</p>")
                 // cardDiv.append("<a href='#' class='btn btn-primary'>Buy</a>")
-                //Append carDiv to itemDiv
+
+                //Append child div to parent div
                 itemDiv.append(cardDiv)
 
                 //Console log attirbutes for each anchor in main container 
