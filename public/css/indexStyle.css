@@ -20,6 +20,14 @@
       font-size: 20px !important;
   }
 
+  /* MODAL */
+  .modal {
+
+  }
+  .modal-header {
+      color: white;
+  }
+  
   /* CAROUSEL */
 
   #myCarousel {
@@ -35,12 +43,4 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-  }
-
-  /* MODAL */
-  .modal {
-
-  }
-  .modal-header {
-      color: white;
   }

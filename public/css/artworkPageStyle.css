@@ -8,6 +8,7 @@ body {
     height: 100%;
 }
 
+/*NAVBAR*/
 .navbar {
     height: 3.5rem;
 }
@@ -18,6 +19,14 @@ body {
 
 .navbar-nav {
     font-size: 20px !important;
+}
+
+ /* MODAL */
+ .modal {
+
+}
+.modal-header {
+    color: white;
 }
 
 .filter {

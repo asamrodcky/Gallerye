@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $.ajax({
-        url: "/api/product",
+        url: "/api/product/:id",
         method: "GET"
     })
         .then(function (res) {

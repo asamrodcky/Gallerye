@@ -91,7 +91,7 @@ var dataArr = [
         "artist": "Tom Sachs",
         "year": "1996",
         "description": "Cardboard and Thermal Adhesive",
-        "price": "on request"
+        "price": "10000"
     },
     {
 

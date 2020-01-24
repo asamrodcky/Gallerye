@@ -5,7 +5,6 @@ $(document).ready(function () {
     $.ajax({
         url: "/api/allArtwork",
         method: "GET",
-
     })
         .then(function (res) {
             // console.log(res)
@@ -40,14 +39,21 @@ $(document).ready(function () {
                 //Append child div to parent div
                 itemDiv.append(cardDiv)
 
-                //Console log attirbutes for each anchor in main container 
+                //Check attributes:
                 // const DivForCards = document.querySelector(".artworkDiv a");
                 // console.log("attributesTest", DivForCards.attributes);
 
-                //Append each year in dropdown:
+                //Append each year and price in dropdown:
                 $("#selectYear").append('<option value="' + res[i].year + '">' + res[i].year + '</option>');
-        
+                $("#selectPrice").append('<option value="' + res[i].price + '">$' + res[i].price + '</option>');
             }
+
+            //Show each year only once in dropdown
+            //order ASC or DESC
+            // if year is selected only show the cards with targeted year
+
+            //Same with prices...
+
 
 
         })
