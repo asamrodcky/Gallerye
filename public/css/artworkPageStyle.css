@@ -9,6 +9,7 @@ body {
 }
 
 /*NAVBAR*/
+
 .navbar {
     height: 3.5rem;
 }
@@ -21,10 +22,10 @@ body {
     font-size: 20px !important;
 }
 
- /* MODAL */
- .modal {
+/* MODAL */
 
-}
+.modal {}
+
 .modal-header {
     color: white;
 }
@@ -50,7 +51,7 @@ body {
     /* margin-left: 0px; */
     padding: 0px;
     width: 250px;
-    height: 1800px;
+    height: 20000px;
     float: left;
     background-color: lightgrey;
 }
@@ -60,6 +61,7 @@ body {
 }
 
 /*CARDS*/
+
 .card {
     border: 1px solid black;
     width: 250px;
@@ -69,7 +71,7 @@ body {
 }
 
 .card-body {
-    padding:0px;
+    padding: 0px;
 }
 
 .card-img-top {
@@ -80,7 +82,7 @@ body {
     /* border: 1px solid red; */
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
-    margin-top:10px;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 
@@ -90,7 +92,6 @@ body {
     font-size: 1rem;
     font-weight: bolder;
     margin-bottom: 5px;
-
 }
 
 #card-text-price {
@@ -99,9 +100,13 @@ body {
     font-size: small;
     margin-bottom: 0;
     color: grey;
-
-
 }
+
+#artpiece-img-14 {
+    width: 117px;
+    height: auto
+}
+
 /* form {
     font-size: 1.5rem;
     margin-top: 50px;
