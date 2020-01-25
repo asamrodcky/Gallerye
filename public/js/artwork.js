@@ -12,7 +12,7 @@ $(document).ready(function () {
             // console.log("Attached to artwork.html")
 
             // For each artwork that our server sends us back:
-            for (var i = 0; i < res.length; i++) {
+            for (var i = 1; i < res.length+1; i++) {
 
                 // NEW PARENT DIV
                 var itemDiv = $("<div>");
@@ -27,7 +27,7 @@ $(document).ready(function () {
                 //add a class
                 cardDiv.addClass("card-body")
                 //create <a><img><a/>
-                var anchorAndImg = $("<a id='anchor' href='/product'> <img class='card-img-top' src='...' alt='card image'> </a>")
+                var anchorAndImg = $("<a id='anchor' href='/product'> <img class='card-img-top' src='../images/IMG_"+ i +".jpg'alt='card image'> </a>")
                 //append <a><img><a/> for each item
                 $("#artpiece-" + i).append(anchorAndImg);
                 //append Name, Year, Artist, Price, button
