@@ -27,7 +27,7 @@ $(document).ready(function () {
                 //add a class
                 cardDiv.addClass("card-body")
                 //create <a><img><a/>
-                var anchorAndImg = $("<a id='anchor' href='/product'> <img class='card-img-top' src='../images/IMG_"+ i +".jpg'alt='card image'> </a>")
+                var anchorAndImg = $("<a id='anchor' href='/product'> <img class='card-img-top' id='artpiece-" + i + "' src='../images/IMG_"+ i +".jpg'alt='card image'> </a>")
                 //append <a><img><a/> for each item
                 $("#artpiece-" + i).append(anchorAndImg);
                 //append Name, Year, Artist, Price, button
