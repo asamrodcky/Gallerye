@@ -2,14 +2,15 @@ $(document).ready(function () {
 
     var dataArr = [];
 
+    var url = ""
+
     $.ajax({
         url: "/api/allArtwork",
         method: "GET",
     })
         .then(function (res) {
-            // console.log(res)
-            // console.log(res.length)
-            // console.log("Attached to artwork.html")
+            var prices = ["Low to High", "High to Low"]
+            var years = ["Oldest to Newest", "Newest to Oldest"]
 
             // For each artwork that our server sends us back:
             for (var i = 0; i < res.length; i++) {
@@ -39,29 +40,16 @@ $(document).ready(function () {
 
                 //Append child div to parent div
                 itemDiv.append(cardDiv)
+            }
 
+            for(j = 0; j < prices.length;j++){
+                console.log(prices[j])
+                $("#selectPrice").append('<option value="' + prices[j].split(" ").join("") + '">' + prices[j] + '</option>');
+            }
 
-                //Check attributes:
-                // const DivForCards = document.querySelector(".artworkDiv a");
-                // console.log("attributesTest", DivForCards.attributes);
-
-                // var years = [2019, 2018, 2017, 2014, 1996, 1969, 1964, 1957,1904]
-
-                //Append each year and price in dropdown:
-                $("#selectYear").append('<option value="' + res[i].year + '">' + res[i].year + '</option>');
-                $("#selectPrice").append('<option value="' + res[i].price + '">$' + res[i].price + '</option>');
-
-                // var s = $("#selectYear").append('<option value="' + res[i].year + '">' + res[i].year + '</option>');
-                // console.log(s);
-            
-                // var seen = {};
-                // $(s).each(function () {
-                //     var txt = $(this).text();
-                //     if (seen[txt])
-                //         $(this).remove();
-                //     else
-                //         seen[txt] = true;
-                // });
+            for(k= 0; k < years.length;k++){
+                console.log(years[k])
+                $("#selectYear").append('<option value="' + years[k].split(" ").join("") + '">' + years[k] + '</option>');
             }
 
             //Show each year only once in dropdown
