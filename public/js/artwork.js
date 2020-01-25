@@ -12,7 +12,7 @@ $(document).ready(function () {
             // console.log("Attached to artwork.html")
 
             // For each artwork that our server sends us back:
-            for (var i = 1; i < res.length+1; i++) {
+            for (var i = 0; i < res.length; i++) {
 
                 // NEW PARENT DIV
                 var itemDiv = $("<div>");
