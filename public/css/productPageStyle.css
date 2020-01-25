@@ -111,9 +111,13 @@ body {
 }
 
 #confirm-purchase {
-    width: 80% !important;
+    /* width: 80% !important; */
     margin: auto !important;
-    /* background-color: black !important; */
+    background-color: green !important;
+}
+
+#confirm- {
+    display: block;
 }
 
 #bgpayment {
