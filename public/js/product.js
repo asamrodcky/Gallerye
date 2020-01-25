@@ -13,10 +13,10 @@ $(document).ready(function () {
             console.log("Attached to product.html")
         });
 
-    
 
     $("#btnBuy").on("click", function () {
         $('#paymodal').modal('show');
+
 
     });
 });
