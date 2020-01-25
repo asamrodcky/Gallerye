@@ -26,7 +26,7 @@ module.exports = function (app) {
   app.get("/account", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/account.html"));
   });
-  app.get("/product/:id", function (req, res) {
+  app.get("/product", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/product.html"));
   });
 

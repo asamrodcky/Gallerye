@@ -27,7 +27,7 @@ $(document).ready(function () {
                 //add a class
                 cardDiv.addClass("card-body")
                 //create <a><img><a/>
-                var anchorAndImg = $("<a id='anchor' href='/product/:id'> <img class='card-img-top' src='...' alt='card image'> </a>")
+                var anchorAndImg = $("<a id='anchor' href='/product'> <img class='card-img-top' src='...' alt='card image'> </a>")
                 //append <a><img><a/> for each item
                 $("#artpiece-" + i).append(anchorAndImg);
                 //append Name, Year, Artist, Price, button
@@ -44,9 +44,23 @@ $(document).ready(function () {
                 // const DivForCards = document.querySelector(".artworkDiv a");
                 // console.log("attributesTest", DivForCards.attributes);
 
+                // var years = [2019, 2018, 2017, 2014, 1996, 1969, 1964, 1957,1904]
+
                 //Append each year and price in dropdown:
                 $("#selectYear").append('<option value="' + res[i].year + '">' + res[i].year + '</option>');
                 $("#selectPrice").append('<option value="' + res[i].price + '">$' + res[i].price + '</option>');
+
+                // var s = $("#selectYear").append('<option value="' + res[i].year + '">' + res[i].year + '</option>');
+                // console.log(s);
+            
+                // var seen = {};
+                // $(s).each(function () {
+                //     var txt = $(this).text();
+                //     if (seen[txt])
+                //         $(this).remove();
+                //     else
+                //         seen[txt] = true;
+                // });
             }
 
             //Show each year only once in dropdown
