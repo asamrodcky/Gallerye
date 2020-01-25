@@ -3,7 +3,6 @@ $(document).ready(function () {
     $('#paymodal').modal('hide');
 
     $.ajax({
-
         url: "/api/product",
         method: "GET"
     })
