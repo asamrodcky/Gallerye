@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-
-    $('#purchase').modal('hide');
+    $('#paymodal').modal('hide');
 
     $.ajax({
 
@@ -14,8 +13,8 @@ $(document).ready(function () {
             console.log("Attached to product.html")
         });
 
-    $("#btn").on("click", function () {
-        $('#purchase').modal('show');
-    });
+    $("#btnBuy").on("click", function () {
+        $('#paymodal').modal('show');
 
+    });
 });
