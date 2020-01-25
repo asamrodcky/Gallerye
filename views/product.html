@@ -180,7 +180,7 @@
                 var cardPrice = $("<p>").addClass("card-text-price");
                 cardPrice.append(res.price);
 
-                var buyButton = $("<a>").addClass("btn bg-dark").attr("id", "btnBuy")
+                var buyButton = $("<a href=#>").addClass("btn bg-dark").attr("id", "btnBuy")
                 buyButton.append("Buy")
 
                 cardBody.append(cardTitle);
@@ -197,10 +197,7 @@
                 $(".container").append(productDiv)
             });
 
-        $('#paymodal').modal('hide');
-
         $("#btnBuy").on('click', function () {
-            console.log("This is working")
             $('#paymodal').modal('show');
         });
 
