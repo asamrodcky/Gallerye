@@ -33,6 +33,7 @@ $(document).ready(function () {
                 //append Name, Year, Artist, Price, button
                 cardDiv.append("<p id='card-title'>" + res[i].product_name + " (" + res[i].year + ")" + "</p>")
                 cardDiv.append("<p id='card-text-artist'>" + res[i].artist + "</p>")
+                // cardDiv.append("<p id='card-text-description'>" + res[i].description + "</p>")
                 cardDiv.append("<p id='card-text-price'>$" + res[i].price + "</p>")
                 // cardDiv.append("<a href='#' class='btn btn-primary'>Buy</a>")
 

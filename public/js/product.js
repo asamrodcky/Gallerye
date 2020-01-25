@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+
+    $('#purchase').modal('hide');
+
     $.ajax({
 
         url: "/api/product",
@@ -10,5 +13,9 @@ $(document).ready(function () {
             console.log(res.length);
             console.log("Attached to product.html")
         });
+
+    $("#btn").on("click", function () {
+        $('#purchase').modal('show');
+    });
 
 });

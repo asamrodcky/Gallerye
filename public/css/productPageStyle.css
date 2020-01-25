@@ -20,18 +20,16 @@ body {
     font-size: 20px !important;
 }
 
- /* MODAL */
- .modal {
+/* MODAL */
 
-}
+.modal {}
+
 .modal-header {
     color: white;
 }
 
-
-
 .item {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 250px;
     height: 70px;
     margin: auto;
@@ -40,49 +38,70 @@ body {
 /*CARDS*/
 
 .productDiv {
-    width: 800px;
     margin: auto;
 }
+
 .card {
-    /* border: 1px solid red; */
-    width: 100%;
+    border: 1px solid black;
+    width: 80%;
     margin: auto;
     margin-top: 30px;
+    width: 50%;
 }
 
 .card-body {
-   
-    padding:0px;
+    /* border: 5px solid blue; */
+    width: 100%;
+    /* height: 500px; */
+    padding: 0px;
+    margin: auto;
 }
 
 .card-img-top {
-    border: 1px solid black;
+    /* border: 3px solid yellow; */
+    width: 50%;
+    height: 100%;
+    padding: 0px;
+    margin: auto;
 }
 
-#card-title {
+.card-title {
     /* border: 1px solid red; */
     font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    margin-top:10px;
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 10px;
     margin-bottom: 0;
+ 
 }
 
-#card-text-artist {
-    /* border: 1px solid red; */
+.card-text-artist {
+    /* border: 1px solid orange; */
     /* font-family: 'Lato', sans-serif; */
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bolder;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    margin-top: 0;
 }
 
-#card-text-price {
+.card-text-description {
+    /* border: 1px solid orange; */
+    /* width: 80%; */
+    font-size: 1rem;
+}
+
+.card-text-price {
     /* border: 1px solid red; */
     font-family: 'Lato', sans-serif;
     font-size: small;
     margin-bottom: 0;
     color: grey;
+    font-size: 1rem;
 }
 
-a {
-    width: 50px;
+.btn {
+    color: white;
+    margin-top: 30px;
+   width: 200px;
+   margin-bottom: 20px;
 }
