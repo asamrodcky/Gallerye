@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   var Customers = sequelize.define("Customers", {
+
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -31,5 +32,12 @@ module.exports = function (sequelize, DataTypes) {
       }
     }
   });
+
+  Customers.associate = function (Models) {
+    Customers.hasMany(Models.Products, {
+      onDelete: "cascade"
+    });
+  };
+
   return Customers;
 };

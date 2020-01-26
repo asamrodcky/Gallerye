@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   var Products = sequelize.define("Products", {
-    
+
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -38,5 +38,13 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: false
     }
   });
+
+  Products.associate = function (models) {
+    Products.belongsTo(models.Customers, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Products;
 };
