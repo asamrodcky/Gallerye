@@ -28,7 +28,7 @@ body {
 
 .info {
 margin-top: 30px;
-border: 1px solid red;
+border: 1px solid black;
 width: 80%;
 height: 50px;
 margin-left: auto;
@@ -36,7 +36,7 @@ margin-right: auto;
 }
 
 .own, .sold {
-border: 1px solid red;
+border: 1px solid black;
 width: 80%;
 height: 200px;
 margin-left: auto;
