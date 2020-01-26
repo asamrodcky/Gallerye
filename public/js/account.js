@@ -1,27 +1,9 @@
 $(document).ready(function () {
-  //SCRIPT CAROUSEL
-  $(document).ready(function () {
-    // Activate Carousel
-    $("#carouselExampleSlidesOnly").carousel({ interval: 3500 });
-
-    // Enable Carousel Indicators
-    $(".item1").click(function () {
-      $("#myCarousel").carousel(0);
-    });
-    $(".item2").click(function () {
-      $("#myCarousel").carousel(1);
-    });
-    $(".item3").click(function () {
-      $("#myCarousel").carousel(2);
-    });
-
     //SCRIPT MODAL
     $("#sign").on('click', function () {
       $('.modal').modal('show');
     });
-  });
-
-  //Modal adds a customer to database
+     //Modal adds a customer to database
   $("#add-customer").on("click", function (event) {
     event.preventDefault();
     // Make a newBook object
@@ -45,7 +27,4 @@ $(document).ready(function () {
     $("#email").val("");
     $("#password").val("");
   });
-
 });
-
-

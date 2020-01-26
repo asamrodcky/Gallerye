@@ -48,8 +48,6 @@
         <li class="nav-item">
           <a class="nav-link" id="sign" href="#">Sign In/Log In</a>
         </li>
-        <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-        <!-- </li> -->
       </ul>
     </div>
   </nav>
@@ -98,58 +96,7 @@
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-    //SCRIPT CAROUSEL
-    $(document).ready(function () {
-      // Activate Carousel
-      $("#carouselExampleSlidesOnly").carousel({ interval: 3500 });
-
-      // Enable Carousel Indicators
-      $(".item1").click(function () {
-        $("#myCarousel").carousel(0);
-      });
-      $(".item2").click(function () {
-        $("#myCarousel").carousel(1);
-      });
-      $(".item3").click(function () {
-        $("#myCarousel").carousel(2);
-      });
-
-      //SCRIPT MODAL
-      $("#sign").on('click', function () {
-        $('.modal').modal('show');
-      });
-    });
-
-  </script>
-
-<script>
-  $("#add-customer").on("click", function (event) {
-   event.preventDefault();
-   // Make a newBook object
-   var newCustomer = {
-    first_name: $("#firstname").val().trim(),
-    last_name: $("#lastname").val().trim(),
-    email: $("#email").val().trim(),
-    password: $("#password").val().trim()
-     
-   };
-   // Send an AJAX POST-request with jQuery
-   $.post("/api/customer", newCustomer)
-    // On success, run the following code
-    .then(function (data) {
-     // Log the data we found
-     console.log(data);
-    });
-   // Empty each input box by replacing the value with an empty string
-   $("#firstname").val("");
-   $("#lastname").val("");
-   $("#email").val("");
-   $("#password").val("");
-  });
- </script>
-
+<script src="js/index.js"></script>
 </body>
 
 </html>
