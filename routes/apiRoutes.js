@@ -69,10 +69,10 @@ module.exports = function (app) {
     });
   });
 
-  //Get all by Title
+  //Get one by Title
   app.get("/api/product/:id", function (req, res) {
     db.Products.findOne({
-      where:{
+      where: {
         id: req.params.id
       }
     }).then(function (dbProducts) {
@@ -85,6 +85,21 @@ module.exports = function (app) {
     db.Customers.create(req.body).then(function (dbCustomers) {
       res.json(dbCustomers);
     });
+  });
+
+  app.put("/api/posts", function (req, res) {
+    db.Products.update({
+      sold: req.body.sold
+    },
+      {where: {
+          id: req.body.id
+        }
+      }).then(function(dbProducts) {
+        res.json(dbProducts);
+      })
+        .catch(function(err) {
+          res.json(err);
+        });
   });
 
   // // Delete an example by id
