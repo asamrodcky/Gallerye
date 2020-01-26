@@ -23,35 +23,46 @@
 </head>
 
 <body>
-    <div class="container">
-        <!--NAVBAR-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">GALLERYE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/allArtwork">All artworks</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/sell">Sell your art</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/account">Account</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="sign" href="#">Sign In/Log In</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">GALLERYE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/allArtwork">All artworks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sell">Sell your art</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/account">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="sign" href="#">Sign In/Log In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <div class="container">
+        <div class="productDiv">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-title"></p>
+                    <p class="card-text-artist"></p>
+                    <p class="card-text-description"></p>
+                    <p class="card-text-price"></p>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" id="btnBuy">BUY</button>
+                </div>
+            </div>
+        </div>
         <!-- MODAL SIGN IN-->
         <div class="modal" id="signin" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -94,7 +105,7 @@
                             <div class="modal-body payment">
                                 <form>
                                     <div class="form-group owner">
-                                        <label for="owner">Owner</label>
+                                        <label for="owner">Cardholder Name</label>
                                         <input type="text" class="form-control" id="owner">
                                     </div>
                                     <div class="form-group CVV">
@@ -165,34 +176,18 @@
                     console.log(res) // object 1 in console
                     console.log("Attached to product.html") //ok in console
 
-                    var productDiv = $("<div>").addClass("productDiv")
-                    var card = $("<div>").addClass("card")
-
                     var img = $("<img src='../public/images/IMG_1.jpg'>").addClass("card-img-top")
-                    var cardBody = $("<div>").addClass("card-body")
-                    var cardTitle = $("<p>").addClass("card-title").append(res.product_name).append(", " + res.year)
-                    var cardArtist = $("<p>").addClass("card-text-artist").append(res.artist);
-                    var cardDesc = $("<p>").addClass("card-text-description").append(res.description);
-                    var cardPrice = $("<p>").addClass("card-text-price").append("$" + res.price);
+                    $(".card-title").append(res.product_name).append(", " + res.year)
+                    $(".card-text-artist").append(res.artist);
+                    $(".card-text-description").append(res.description);
+                    $(".card-text-price").append("$" + res.price);
 
-                    var buyButton = $('<button type="button" class="btn btn-dark" data-toggle="modal" id="btnBuy">BUY</button>');
-
-                    card.append(img);
-                    card.append(cardBody);
-
-                    cardBody.append(cardTitle);
-                    cardBody.append(cardArtist);
-                    cardBody.append(cardDesc);
-                    cardBody.append(cardPrice);
-                    cardBody.append(buyButton);
-
-                    productDiv.append(card);
-
-                    $(".container").append(productDiv);
+                    $(".card").prepend(img)
                 });
 
             //BUY button calls modal payment
             $('#btnBuy').on('click', function () {
+                console.log("This is working???")
                 $('#paymodal').modal('show');
             });
 
