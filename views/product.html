@@ -53,7 +53,7 @@
         </nav>
 
         <!-- MODAL SIGN IN-->
-        <div class="modal" id= "signin" tabindex="-1" role="dialog">
+        <div class="modal" id="signin" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-dark">
@@ -153,56 +153,54 @@
     <!-- <script src="js/product.js"></script> -->
 
     <script type="text/javascript">
-    $(document).ready(function () {
+        $(document).ready(function () {
 
-        $('#paymodal').modal('hide');
+            $('#paymodal').modal('hide');
 
-        $.ajax({
-            url: "/api/product/1",
-            method: "GET",
-        })
-            .then(function (res) {
-                console.log(res) // object 1 in console
-                console.log("Attached to product.html") //ok in console
+            $.ajax({
+                url: "/api/product/1",
+                method: "GET",
+            })
+                .then(function (res) {
+                    console.log(res) // object 1 in console
+                    console.log("Attached to product.html") //ok in console
 
-                var productDiv = $("<div>").addClass("productDiv") //create div 
-                var card = $("<div>").addClass("card")
+                    var productDiv = $("<div>").addClass("productDiv")
+                    var card = $("<div>").addClass("card")
 
-                var img = $("<img src='../public/images/IMG_1.jpg'>").addClass("card-img-top")
-                var cardBody = $("<div>").addClass("card-body")
-                var cardTitle = $("<p>").addClass("card-title").append(res.product_name).append(", " + res.year)
-                var cardArtist = $("<p>").addClass("card-text-artist").append(res.artist);
-                var cardDesc = $("<p>").addClass("card-text-description").append(res.description);
-                var cardPrice = $("<p>").addClass("card-text-price").append("$" + res.price);
+                    var img = $("<img src='../public/images/IMG_1.jpg'>").addClass("card-img-top")
+                    var cardBody = $("<div>").addClass("card-body")
+                    var cardTitle = $("<p>").addClass("card-title").append(res.product_name).append(", " + res.year)
+                    var cardArtist = $("<p>").addClass("card-text-artist").append(res.artist);
+                    var cardDesc = $("<p>").addClass("card-text-description").append(res.description);
+                    var cardPrice = $("<p>").addClass("card-text-price").append("$" + res.price);
 
+                    var buyButton = $('<button type="button" class="btn btn-dark" data-toggle="modal" id="btnBuy">BUY</button>');
 
-                var buyButton = $('<button type="button" class="btn btn-dark" data-toggle="modal" id="btnBuy">BUY</button>');
+                    card.append(img);
+                    card.append(cardBody);
 
-                card.append(img);
-                card.append(cardBody);
+                    cardBody.append(cardTitle);
+                    cardBody.append(cardArtist);
+                    cardBody.append(cardDesc);
+                    cardBody.append(cardPrice);
+                    cardBody.append(buyButton);
 
-                cardBody.append(cardTitle);
-                cardBody.append(cardArtist);
-                cardBody.append(cardDesc);
-                cardBody.append(cardPrice);
-                cardBody.append(buyButton);
+                    productDiv.append(card);
 
-                productDiv.append(card);
+                    $(".container").append(productDiv);
+                });
 
-                $(".container").append(productDiv);
+            //BUY button calls modal payment
+            $('#btnBuy').on('click', function () {
+                $('#paymodal').modal('show');
             });
 
-
-
-        $('#btnBuy').on('click', function () {
-            $('#paymodal').modal('show');
+            //modal sign in
+            $('#sign').on('click', function () {
+                $('#signin').modal('show');
+            });
         });
-
-        //SCRIPT MODAL
-        $('#sign').on('click', function () {
-            $('#signin').modal('show');
-        });
-    });
     </script>
 
 </body>
