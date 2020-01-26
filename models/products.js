@@ -39,12 +39,12 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  Products.associate = function (models) {
-    Products.belongsTo(models.Customers, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // Products.associate = function (models) {
+  //   Products.belongsTo(models.Customers, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
   return Products;
 };

@@ -6,7 +6,7 @@ module.exports = function (app) {
   // Get all artwork
   app.get("/api/allArtwork", function (req, res) {
     db.Products.findAll({
-      subQuery : false, //added this!
+      // subQuery : false, //added this!
       order: [["createdAt", "ASC"]]
     }).then(function (dbProducts) {
       res.json(dbProducts);
