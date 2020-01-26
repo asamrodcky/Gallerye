@@ -1,17 +1,19 @@
-const express = require("express");
-
 var db = require("../models");
 
 module.exports = function (app) {
   // Get all artwork
   app.get("/api/allArtwork", function (req, res) {
     db.Products.findAll({
-      subQuery : false, //added this!
       order: [["createdAt", "ASC"]]
     }).then(function (dbProducts) {
       res.json(dbProducts);
     });
   });
+
+  // var query = {};
+  // if (req.query.Customers_id) {
+  //   query.Customers = req.query.Customers;
+  // }
 
   // Get all artwork in ascending price order
   app.get("/api/allArtwork/priceLowtoHigh", function (req, res) {
@@ -80,15 +82,7 @@ module.exports = function (app) {
       res.json(dbProducts);
     });
   });
-
-  // Create a new customer
-  app.post("/api/customer", function (req, res) {
-    db.Customers.create(req.body).then(function (dbCustomers) {
-      res.json(dbCustomers);
-    });
-  });
-
-  app.put("/api/posts", function (req, res) {
+  app.put("/api/product", function (req, res) {
     db.Products.update({
       sold: req.body.sold
     },
@@ -103,11 +97,4 @@ module.exports = function (app) {
         });
   });
 
-  // // Delete an example by id
-  // app.delete("/api/examples/:id", function(req, res) {
-  //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.json(dbExample);
-  //   });
-  // });
 };
-

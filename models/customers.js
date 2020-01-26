@@ -35,6 +35,9 @@ module.exports = function (sequelize, DataTypes) {
 
   Customers.associate = function (Models) {
     Customers.hasMany(Models.Products, {
+      primaryKey: {
+        allowNull: false
+      },
       onDelete: "cascade"
     });
   };

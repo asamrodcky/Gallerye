@@ -22,7 +22,8 @@ app.use(express.static("public"));
 // app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/products-api-routes.js")(app);
+require("./routes/customers-api-routes.js")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
@@ -33,13 +34,15 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
-// db.Products.belongsTo(db.Customers, {constraints: true, onDelete: 'CASCADE'});
-// db.Customers.hasMany(db.Products);
 // magic Sequelize will create an addProducts() method
-  
+db.Customers.hasMany(db.Products);
+db.Products.belongsTo(db.Customers, {
+  foreignKey: 'CustomerId'
+});
+
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
