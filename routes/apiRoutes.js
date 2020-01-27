@@ -31,6 +31,15 @@ module.exports = function (app) {
     });
   });
 
+  // Get all artwork in descending year order
+  app.get("/api/allArtwork/yearNewesttoOldest", function (req, res) {
+    db.Products.findAll({
+      order: [["year", "DESC"]]
+    }).then(function (dbProducts) {
+      res.json(dbProducts);
+    });
+  });
+
   // Get all artwork in ascending year order
   app.get("/api/allArtwork/yearOldesttoNewest", function (req, res) {
     db.Products.findAll({
@@ -39,16 +48,7 @@ module.exports = function (app) {
       res.json(dbProducts);
     });
   });
-
-  // Get all artwork in descending year order
-  app.get("/api/allArtwork/priceNewesttoOldest", function (req, res) {
-    db.Products.year({
-      order: [["price", "DESC"]]
-    }).then(function (dbProducts) {
-      res.json(dbProducts);
-    });
-  });
-
+  
   // Get all by Artist
   app.get("/api/allArtwork/:artist", function (req, res) {
     db.Products.findAll({

@@ -19,6 +19,23 @@ module.exports = function (app) {
   app.get("/allArtwork", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/artwork.html"));
   });
+
+  app.get("/allArtworkNewToOld", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/artworkNewToOld.html"));
+  });
+
+  app.get("/allArtworkOldToNew", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/artworkOldToNew.html"));
+  });
+  
+  app.get("/allArtworkPriceHighToLow", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/artworkPriceHighToLow.html"));
+  });
+
+  app.get("/allArtworkPriceLowToHigh", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/artworkPriceLowToHigh.html"));
+  });
+
   app.get("/sell", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/sell.html"));
   });
