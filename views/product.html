@@ -168,15 +168,24 @@
 
             $('#paymodal').modal('hide');
 
+            var currentURL = window.location.href.split("/")
+            var currentURLid = currentURL[currentURL.length-1]
+
+            function getURL() {
+                console.log(currentURLid);
+            }
+
+            getURL();
+
             $.ajax({
-                url: "/api/product/1",
+                url: "/api/product/"+currentURLid,
                 method: "GET",
             })
                 .then(function (res) {
                     console.log(res) // object 1 in console
                     console.log("Attached to product.html") //ok in console
 
-                    var img = $("<img src='../public/images/IMG_1.jpg'>").addClass("card-img-top")
+                    var img = $("<img src='../public/images/IMG_"+ currentURLid +".jpg'>").addClass("card-img-top")
                     $(".card-title").append(res.product_name).append(", " + res.year)
                     $(".card-text-artist").append(res.artist);
                     $(".card-text-description").append(res.description);
