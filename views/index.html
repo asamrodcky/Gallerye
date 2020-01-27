@@ -6,18 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- AJAX JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+  <!-- Index CSS -->
   <link rel="stylesheet" href="css/indexStyle.css">
 
 </head>
@@ -39,15 +47,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/allArtwork">All artworks</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sell">Sell your art</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/account">Account</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="sign" href="#">Sign In/Log In</a>
-        </li>
       </ul>
     </div>
   </nav>
@@ -57,21 +56,27 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header bg-dark">
-          <h5 class="modal-title">GALLERYE <i>Sign In</i></h5>
+          <h5 class="modal-title">GALLERYE <i>Sign Up/Log In</i></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <!-- <span aria-hidden="true">&times;</span> -->
           </button>
         </div>
         <div class="modal-body">
+          <h6><strong>Sign Up</strong></h6>
           <form action="" method="POST">
             First Name: <br>
             <input type="text" name="firstname" size="30" id="firstname"> <br>
             Last Name: <br>
             <input type="text" name="name" size="30" id="lastname"> <br>
             Email <br>
-            <input type="text" name="email" size="30" id="email"> <br>
+            <input type="email" name="email" size="30" id="email"> <br>
             Password <br>
-            <input type="text" name="password" size="30" id="password"> <br>
+            <input type="password" name="password" size="30" id="password"> <br>
+            <hr>
+            <h6><strong>Log In</strong></h6>
+            Email <br>
+            <input type="email" name="email" size="30" id="loginEmail"> <br>
+            Password <br>
+            <input type="password" name="password" size="30" id="loginPassword"> <br>
           </form>
         </div>
         <div class="modal-footer">
@@ -96,7 +101,9 @@
       </div>
     </div>
   </div>
-<script src="js/index.js"></script>
+
+  <script src="js/index.js"></script>
+
 </body>
 
 </html>
