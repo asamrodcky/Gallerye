@@ -5,7 +5,7 @@ $(document).ready(function () {
     var url = ""
 
     $.ajax({
-        url: "/api/allArtwork/:artist",
+        url: "/api/allArtwork/alphaArtist",
         method: "GET",
     })
         .then(function (res) {

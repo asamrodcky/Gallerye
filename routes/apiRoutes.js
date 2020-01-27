@@ -13,6 +13,15 @@ module.exports = function (app) {
     });
   });
 
+  // Get all artwork alphabetically by artist
+  app.get("/api/allArtwork/alphaArtist", function (req, res) {
+    db.Products.findAll({
+      order: [["artist", "ASC"]]
+    }).then(function (dbProducts) {
+      res.json(dbProducts);
+    });
+  });
+
   // Get all artwork in ascending price order
   app.get("/api/allArtwork/priceLowtoHigh", function (req, res) {
     db.Products.findAll({
@@ -49,7 +58,7 @@ module.exports = function (app) {
     });
   });
   
-  // Get all by Artist
+  // Get artwork by Artist
   app.get("/api/allArtwork/:artist", function (req, res) {
     db.Products.findAll({
       where: {

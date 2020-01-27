@@ -13,11 +13,14 @@ module.exports = function (app) {
   app.get("/public/images/:filename", function (req, res) {
     // console.log(req.filename);
     res.sendFile(path.join(__dirname, "../public/images/" + req.params.filename));
-
   });
 
   app.get("/allArtwork", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/artwork.html"));
+  });
+
+  app.get("/allArtworkByArtist", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/artworkByArtist.html"));
   });
 
   app.get("/allArtworkNewToOld", function (req, res) {
@@ -27,7 +30,7 @@ module.exports = function (app) {
   app.get("/allArtworkOldToNew", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/artworkOldToNew.html"));
   });
-  
+
   app.get("/allArtworkPriceHighToLow", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/artworkPriceHighToLow.html"));
   });
@@ -47,7 +50,7 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../views/product.html"));
   });
 
-  
+
 
   // Load example page and pass in an example by id
   // app.get("/example/:id", function(req, res) {
