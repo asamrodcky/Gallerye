@@ -90,10 +90,20 @@ module.exports = function (app) {
     });
   });
 
+  // Get all customer data
+  app.get("/api/allCustomers", function (req, res) {
+    db.Customers.findAll({}).then(function (dbCustomers) {
+      res.json(dbCustomers);
+    });
+  });
+
   // Create a new customer
-  app.post("/api/customer", function (req, res) {
+  app.post("/api/customer", function (req, res, err) {
     db.Customers.create(req.body).then(function (dbCustomers) {
       res.json(dbCustomers);
+    })
+    .catch(function(err){
+      throw err
     });
   });
 
