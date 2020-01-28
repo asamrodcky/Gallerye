@@ -110,7 +110,7 @@ module.exports = function (app) {
       res.json(dbCustomers);
     })
     .catch(function(err){
-      throw err
+      res.json({"Error":true, "message": "email or password does not meet requirement"})
     });
   });
 
