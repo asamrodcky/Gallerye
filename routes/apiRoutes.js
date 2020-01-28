@@ -107,7 +107,7 @@ module.exports = function (app) {
     });
   });
 
-  app.put("/api/posts", function (req, res) {
+  app.put("/api/products", function (req, res) {
     db.Products.update({
       sold: req.body.sold
     },
