@@ -20,12 +20,14 @@ $(document).ready(function () {
   });
 
 
+  var newCustomer = {}
+
   //Modal adds a customer to database
   $("#add-customer").on("click", function (event) {
     event.preventDefault();
 
     // Make a newBook object
-    var newCustomer = {
+    newCustomer = {
       first_name: $("#firstname").val().trim(),
       last_name: $("#lastname").val().trim(),
       email: $("#email").val().trim(),
@@ -40,7 +42,6 @@ $(document).ready(function () {
           if(res["Error"])
           alert(res["message"])
         })
-      });
 
     document.cookie = "email=" + newCustomer.email
     document.cookie = "signedIn=true"
@@ -56,6 +57,7 @@ $(document).ready(function () {
 
     // Reload page
     window.location.reload()
+    console.log(newCustomer)
   });
 
   if (document.cookie.split("; ")[1] === "signedIn=true") {
@@ -65,7 +67,7 @@ $(document).ready(function () {
       </li>
       <li class='nav-item dropdown'>
       <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown'
-      data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'> Name </a>
+      data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'> Account </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="/account">Account</a>
         <a class="dropdown-item" id='logOut' href="/">Logout</a>
@@ -90,4 +92,4 @@ $(document).ready(function () {
 
   console.log(document.cookie.split("; "))
 
-
+});
