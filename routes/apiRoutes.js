@@ -7,7 +7,8 @@ module.exports = function (app) {
   app.get("/api/allArtwork", function (req, res) {
     db.Products.findAll({
       // subQuery : false, //added this!
-      order: [["createdAt", "ASC"]]
+      order: [["createdAt", "ASC"]],
+      where: {sold : false}
     }).then(function (dbProducts) {
       res.json(dbProducts);
     });
@@ -16,7 +17,9 @@ module.exports = function (app) {
   // Get all artwork alphabetically by artist
   app.get("/api/allArtwork/alphaArtist", function (req, res) {
     db.Products.findAll({
-      order: [["artist", "ASC"]]
+      order: [["artist", "ASC"]],
+      where: {sold : false}
+
     }).then(function (dbProducts) {
       res.json(dbProducts);
     });
@@ -25,7 +28,8 @@ module.exports = function (app) {
   // Get all artwork in ascending price order
   app.get("/api/allArtwork/priceLowtoHigh", function (req, res) {
     db.Products.findAll({
-      order: [["price", "ASC"]]
+      order: [["price", "ASC"]],
+      where: {sold : false}
     }).then(function (dbProducts) {
       res.json(dbProducts);
     });
@@ -34,7 +38,8 @@ module.exports = function (app) {
   // Get all artwork in descending price order
   app.get("/api/allArtwork/priceHightoLow", function (req, res) {
     db.Products.findAll({
-      order: [["price", "DESC"]]
+      order: [["price", "DESC"]],
+      where: {sold : false}
     }).then(function (dbProducts) {
       res.json(dbProducts);
     });
@@ -43,7 +48,8 @@ module.exports = function (app) {
   // Get all artwork in descending year order
   app.get("/api/allArtwork/yearNewesttoOldest", function (req, res) {
     db.Products.findAll({
-      order: [["year", "DESC"]]
+      order: [["year", "DESC"]],
+      where: {sold : false}
     }).then(function (dbProducts) {
       res.json(dbProducts);
     });
@@ -52,7 +58,8 @@ module.exports = function (app) {
   // Get all artwork in ascending year order
   app.get("/api/allArtwork/yearOldesttoNewest", function (req, res) {
     db.Products.findAll({
-      order: [["year", "ASC"]]
+      order: [["year", "ASC"]],
+      where: {sold : false}
     }).then(function (dbProducts) {
       res.json(dbProducts);
     });
