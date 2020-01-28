@@ -36,14 +36,10 @@ $(document).ready(function () {
     // Send an AJAX POST-request with jQuery
     $.post("/api/customer", newCustomer)
       // On success, run the following code
-      .done(function() {
-        alert( "second success" );
-      })
-      .fail(function() {
-        alert( "error" );
-      })
-      .always(function() {
-        alert( "finished" );
+        .then(function(res){
+          if(res["Error"])
+          alert(res["message"])
+        })
       });
 
     document.cookie = "email=" + newCustomer.email
@@ -93,7 +89,5 @@ $(document).ready(function () {
   }
 
   console.log(document.cookie.split("; "))
-
-});
 
 
