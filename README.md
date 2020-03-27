@@ -21,4 +21,6 @@ The Future:
 * Paypal/Shopify or other E-commerce platform for payment
 * Potential stock price for individual pieces and artists (Stock X influenced???)
 
+![](screenshots/gallery_01.png)
+
 
