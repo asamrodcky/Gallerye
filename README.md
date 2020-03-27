@@ -22,5 +22,6 @@ The Future:
 * Potential stock price for individual pieces and artists (Stock X influenced???)
 
 ![](screenshots/gallery_01.png)
+![](screenshots/gallery_02.png)
 
 
